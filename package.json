@@ -14,7 +14,6 @@
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
-    "@privy-io/react-auth": "^3.3.0",
     "@reown/appkit": "^1.8.10",
     "@reown/appkit-utils": "^1.8.10",
     "@solana/wallet-adapter-base": "^0.9.27",
