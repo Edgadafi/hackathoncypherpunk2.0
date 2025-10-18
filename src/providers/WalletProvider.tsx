@@ -18,14 +18,12 @@ interface WalletProviderProps {
 }
 
 export default function WalletProvider({ children }: WalletProviderProps) {
-  // Configure network (devnet for development)
-  const network = WalletAdapterNetwork.Devnet
+  // Configure network (mainnet-beta for production)
+  const network = WalletAdapterNetwork.Mainnet
 
   // You can also use custom RPC endpoint
   const endpoint = useMemo(() => {
-    return (
-      process.env.NEXT_PUBLIC_SOLANA_RPC_URL || clusterApiUrl(network)
-    )
+    return process.env.NEXT_PUBLIC_SOLANA_RPC_URL || clusterApiUrl(network)
   }, [network])
 
   // Configure supported wallets
@@ -47,4 +45,3 @@ export default function WalletProvider({ children }: WalletProviderProps) {
     </ConnectionProvider>
   )
 }
-
