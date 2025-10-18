@@ -60,9 +60,7 @@ export default function PortfolioPage() {
 
             <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
               <div className="text-3xl mb-2">📊</div>
-              <div className="text-gray-400 text-sm mb-1">
-                Active Positions
-              </div>
+              <div className="text-gray-400 text-sm mb-1">Active Positions</div>
               <div className="text-white text-2xl font-bold">
                 {stats ? stats.activePositions : '--'}
               </div>
@@ -79,7 +77,9 @@ export default function PortfolioPage() {
                 }`}
               >
                 {stats
-                  ? `${stats.totalProfit >= 0 ? '+' : ''}${stats.totalProfit.toFixed(2)} SOL`
+                  ? `${
+                      stats.totalProfit >= 0 ? '+' : ''
+                    }${stats.totalProfit.toFixed(2)} SOL`
                   : '--'}
               </div>
             </div>
@@ -96,9 +96,7 @@ export default function PortfolioPage() {
           {/* Active Positions */}
           <div className="bg-gray-900 border border-gray-800 rounded-xl p-8 mb-8">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold text-white">
-                Active Positions
-              </h2>
+              <h2 className="text-xl font-bold text-white">Active Positions</h2>
               {connected && activePositions.length > 0 && (
                 <span className="text-gray-400 text-sm">
                   {activePositions.length} positions

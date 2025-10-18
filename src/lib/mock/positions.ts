@@ -120,6 +120,8 @@ export function getClaimableWinnings(): MockPosition[] {
 }
 
 export function getTotalClaimableAmount(): number {
-  return getClaimableWinnings().reduce((sum, p) => sum + p.amount + p.unrealizedPnL, 0)
+  return getClaimableWinnings().reduce(
+    (sum, p) => sum + p.amount + p.unrealizedPnL,
+    0
+  )
 }
-

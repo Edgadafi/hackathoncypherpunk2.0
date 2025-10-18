@@ -211,4 +211,3 @@ export const CATEGORIES = [
   'Economics',
   'Climate',
 ]
-
