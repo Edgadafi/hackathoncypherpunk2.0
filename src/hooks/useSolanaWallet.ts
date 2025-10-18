@@ -49,4 +49,3 @@ export function useSolanaWallet() {
     selectWallet: select,
   }
 }
-
