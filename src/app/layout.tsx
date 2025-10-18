@@ -1,32 +1,29 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import PrivyProvider from "@/providers/PrivyProvider";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import PrivyProvider from '@/providers/PrivyProvider'
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+  variable: '--font-inter',
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
-  title: "PrismaFi | Your own Prediction Markets on Solana",
-  description: "Generate your prediction market in 3 steps. Put your price for truth. 95% privacy with on-chain resolution and only 0.5% fees.",
-};
+  title: 'PrismaFi | Your own Prediction Markets on Solana',
+  description:
+    'Generate your prediction market in 3 steps. Put your price for truth. 95% privacy with on-chain resolution and only 0.5% fees.',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} antialiased`}
-      >
-        <PrivyProvider>
-          {children}
-        </PrivyProvider>
+      <body className={`${inter.variable} antialiased`}>
+        <PrivyProvider>{children}</PrivyProvider>
       </body>
     </html>
-  );
+  )
 }
