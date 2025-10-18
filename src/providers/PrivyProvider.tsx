@@ -29,9 +29,6 @@ export default function PrivyProvider({ children }: PrivyProviderProps) {
           showWalletLoginFirst: true,
         },
         loginMethods: ['wallet', 'email', 'google', 'twitter'],
-        embeddedWallets: {
-          createOnLogin: 'users-without-wallets',
-        },
         defaultChain: {
           id: 245022926, // Solana devnet
           name: 'Solana Devnet',

@@ -19,8 +19,7 @@ export function useWallet() {
   // Get the primary Solana wallet
   const solanaWallet = useMemo(() => {
     return wallets.find(wallet => 
-      wallet.walletClientType === 'solana' || 
-      wallet.chainType === 'solana'
+      wallet.walletClientType === 'solana'
     );
   }, [wallets]);
 
@@ -85,8 +84,6 @@ export function useWallet() {
         .filter(account => account.type === 'wallet')
         .map(account => ({
           address: account.address,
-          chainType: account.chainType,
-          verified: account.verifiedAt !== null,
         })),
       createdAt: user.createdAt,
     };
