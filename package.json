@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "setup": "echo '🚀 Setting up folder structure...' && mkdir -p src/components/{layout,market,filters,prophets,impact,nft,share,ui} && mkdir -p src/app/{market,portfolio,activity,squads,prophets,truth-mirror} && echo '✅ Setup complete!'",

@@ -1,17 +1,21 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { PrivyProvider as PrivyProviderBase } from '@privy-io/react-auth';
+import React from 'react'
+import { PrivyProvider as PrivyProviderBase } from '@privy-io/react-auth'
 
 interface PrivyProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function PrivyProvider({ children }: PrivyProviderProps) {
-  const appId = process.env.NEXT_PUBLIC_PRIVY_APP_ID || '';
+  const appId = process.env.NEXT_PUBLIC_PRIVY_APP_ID || ''
 
   if (!appId) {
-    console.warn('⚠️ NEXT_PUBLIC_PRIVY_APP_ID is not set. Wallet connection will not work.');
+    console.warn(
+      '⚠️ NEXT_PUBLIC_PRIVY_APP_ID is not set. Wallet connection will not work.'
+    )
+    // Return a basic wrapper to prevent crashes
+    return <>{children}</>
   }
 
   return (
@@ -39,7 +43,10 @@ export default function PrivyProvider({ children }: PrivyProviderProps) {
           },
           rpcUrls: {
             default: {
-              http: [process.env.NEXT_PUBLIC_SOLANA_RPC_URL || 'https://api.devnet.solana.com'],
+              http: [
+                process.env.NEXT_PUBLIC_SOLANA_RPC_URL ||
+                  'https://api.devnet.solana.com',
+              ],
             },
             public: {
               http: ['https://api.devnet.solana.com'],
@@ -88,6 +95,5 @@ export default function PrivyProvider({ children }: PrivyProviderProps) {
     >
       {children}
     </PrivyProviderBase>
-  );
+  )
 }
-
