@@ -45,7 +45,7 @@ const Header = () => {
               <img 
                 src="/images/prismafi-logo.svg" 
                 alt="PrismaFi" 
-                className="h-30 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
           </div>

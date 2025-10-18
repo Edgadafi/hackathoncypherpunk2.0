@@ -140,9 +140,7 @@ export function getUserActivity(filterUser: 'You'): MockActivity[] {
   return MOCK_ACTIVITY.filter((a) => a.user === filterUser)
 }
 
-export function getActivityByType(
-  type: MockActivity['type']
-): MockActivity[] {
+export function getActivityByType(type: MockActivity['type']): MockActivity[] {
   return MOCK_ACTIVITY.filter((a) => a.type === type)
 }
 
@@ -170,7 +168,9 @@ export function getActivityIcon(type: MockActivity['type']): string {
   return icons[type]
 }
 
-export function getExplorerUrl(signature: string, cluster: 'devnet' | 'mainnet' = 'devnet'): string {
+export function getExplorerUrl(
+  signature: string,
+  cluster: 'devnet' | 'mainnet' = 'devnet'
+): string {
   return `https://explorer.solana.com/tx/${signature}?cluster=${cluster}`
 }
-
