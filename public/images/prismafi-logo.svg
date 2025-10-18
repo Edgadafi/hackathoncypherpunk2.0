@@ -37,8 +37,8 @@
         fill="url(#glowGradient)"
         fill-opacity="0.1"/>
   
-  <!-- Stylized "S" -->
-  <path d="M90 65 Q100 60 110 65 Q115 70 110 75 L90 85 Q85 90 90 95 Q100 100 110 95" 
+  <!-- Stylized "S" - Corrected Direction -->
+  <path d="M110 65 Q100 60 90 65 Q85 70 90 75 L110 85 Q115 90 110 95 Q100 100 90 95" 
         stroke="url(#prismaticGradient)" 
         stroke-width="3" 
         fill="none"
