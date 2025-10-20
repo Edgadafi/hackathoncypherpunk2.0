@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import WalletProvider from '@/providers/WalletProvider'
+import './suppress-wallet-errors'
 
 const inter = Inter({
   variable: '--font-inter',

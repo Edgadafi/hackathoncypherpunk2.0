@@ -7,7 +7,7 @@
  * - Meta-predictions
  * - Sistema de reputación
  * - Moderación comunitaria
- * 
+ *
  * Program ID: 6b4kfh6kr9X6ka2H5C1qhK1jdnGmX65Ni85pC5qzLQB7
  */
 

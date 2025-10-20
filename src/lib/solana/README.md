@@ -3,15 +3,18 @@
 ## Archivos
 
 ### `programId.ts` ✅
+
 - **Program ID:** `6b4kfh6kr9X6ka2H5C1qhK1jdnGmX65Ni85pC5qzLQB7`
 - **Network:** Devnet
 - **Status:** Configurado y listo
 
 ### `idl.ts` ✅
+
 - **Contrato:** Complejo (11 instrucciones)
 - **Funcionalidades:**
+
   - ✅ initialize
-  - ✅ createMarket  
+  - ✅ createMarket
   - ✅ submitEvidence
   - ✅ placePrediction
   - ✅ voteOnEligibility
@@ -31,10 +34,12 @@
   - 📋 Sistema de evidencias científicas
 
 ### `idl-complex.ts` ✅
+
 - Copia de seguridad del IDL completo
 - Mantiene la versión completa por si necesitas referenciarla
 
 ### `contract.ts` ⚠️
+
 - **Estado:** Parcialmente compatible
 - **Nota:** Los métodos actuales (`createMarket`, `placeBet`, `resolveMarket`, `claimWinnings`) están diseñados para el contrato simple
 - **Recomendación:** Necesita actualización para soportar el contrato complejo completo
@@ -42,9 +47,11 @@
 ## 🔄 Próximos Pasos
 
 ### Opción A: Usar Contrato Complejo (Recomendado) ⭐
+
 Ya configurado con el IDL actual.
 
 **Para usar:**
+
 ```typescript
 import { useContract } from '@/hooks/useContract'
 
@@ -52,10 +59,12 @@ const { markets, fetchMarkets } = useContract()
 ```
 
 **Limitación actual:**
+
 - Los hooks actuales solo soportan las funciones básicas del contrato simple
 - Necesitas crear hooks adicionales para las funciones avanzadas
 
 ### Opción B: Desplegar Contrato Simple
+
 Si prefieres empezar con algo más sencillo:
 
 1. Ve a: `prediction-market-contract/programs/prediction_market/src/lib.rs`
@@ -69,4 +78,3 @@ Si prefieres empezar con algo más sencillo:
 - **GUIA_SOLANA_PLAYGROUND_DEPLOY.md** - Cómo deployar
 - **CONECTAR_FRONTEND_GUIA.md** - Cómo conectar frontend
 - **RESUMEN_RAPIDO_DEPLOY.md** - Referencia rápida
-
