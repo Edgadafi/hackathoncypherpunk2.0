@@ -1,24 +1,24 @@
-'use client';
+'use client'
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Search, Menu, X } from 'lucide-react';
-import { clsx } from 'clsx';
-import WalletButton from './WalletButton';
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { Search, Menu, X } from 'lucide-react'
+import { clsx } from 'clsx'
+import WalletButton from './WalletButton'
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
+      setIsScrolled(window.scrollY > 0)
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   // Navigation items
   const navItems = [
@@ -26,7 +26,7 @@ const Header = () => {
     { name: 'Create Market', href: '/create-market' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Activity', href: '/activity' },
-  ];
+  ]
 
   return (
     <header
@@ -42,9 +42,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img 
-                src="/images/prismafi-logo.svg" 
-                alt="PrismaFi" 
+              <img
+                src="/images/prismafi-logo.svg"
+                alt="PrismaFi"
                 className="h-12 w-auto"
               />
             </Link>
@@ -136,8 +136,7 @@ const Header = () => {
         )}
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
-
+export default Header
