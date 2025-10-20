@@ -1,10 +1,14 @@
 /**
  * IDL (Interface Definition Language) del smart contract
  *
- * IMPORTANTE: Después de deployar en Solana Playground:
- * 1. Ve al tab "IDL" en Playground
- * 2. Copia TODO el contenido JSON
- * 3. Reemplaza el objeto 'IDL' abajo con tu JSON
+ * Este IDL corresponde al contrato complejo con:
+ * - Verificación humana (ProofOfHumanity, BrightID, Gitcoin Passport)
+ * - Integración con Oracles (Chainlink)
+ * - Meta-predictions
+ * - Sistema de reputación
+ * - Moderación comunitaria
+ * 
+ * Program ID: 6b4kfh6kr9X6ka2H5C1qhK1jdnGmX65Ni85pC5qzLQB7
  */
 
 export const IDL = {
